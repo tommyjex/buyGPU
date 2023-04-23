@@ -72,8 +72,8 @@ def runinstacnce(subnet_id):
 
 if __name__ == '__main__':
     configuration = volcenginesdkcore.Configuration()
-    configuration.ak = "AKLTNTgxNzg0NWYyMDQ3NDRmOWE0MzU4N2MwNWMzNzllOGQ"
-    configuration.sk = "T0RBME16VTJOamswTkdJNU5EWmpaamszTTJGaU5qSmxNVE00TkROak1tTQ=="
+    configuration.ak = "your ak"
+    configuration.sk = "your sk"
     configuration.region = "cn-beijing"
     # 子网ID
     # subnet cn-beijing-a: subnet-rs15zepqxuyov0x57ijt6t5
