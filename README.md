@@ -15,8 +15,9 @@ pip3 install volcengine-python-sdk
 ```
 https://github.com/tommyjex/buyGPU.git
 ```
+4. 修改参数：ak/sk，instance接口参数
 
-4. 运行buyGPU程序
+5. 运行buyGPU程序
 ```
 nohup python3 main.py > python3.log &
 ```
