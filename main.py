@@ -36,7 +36,7 @@ file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
 
-def runinstacnce(subnet_id):
+def runinstacnce(zone_id,subnet_id):
 
     try:
         api_instance = volcenginesdkecs.ECSApi(volcenginesdkcore.ApiClient(configuration))
@@ -44,7 +44,7 @@ def runinstacnce(subnet_id):
             volcenginesdkecs.RunInstancesRequest(
                 instance_name="xujianhua-测试-强密码-01",
                 instance_type="ecs.g1ve.2xlarge",
-                zone_id="cn-beijing-b",
+                zone_id=zone_id,
                 network_interfaces=[volcenginesdkecs.NetworkInterfaceForRunInstancesInput(
 
                     subnet_id=subnet_id,
@@ -82,10 +82,11 @@ if __name__ == '__main__':
 
     # 镜像ID-cn-beijing
     # Ubuntu 20.04 with GPU Driver 64位： image-ebgz30w77ce7vtluux2d
-    subnet_ids = ["subnet-rs15zepqxuyov0x57ijt6t5",
-                  "subnet-13g7p5bdujm683n6nu4nmwxlz"]
+    subnet_ids = {"cn-beijing-a":"subnet-rs15zepqxuyov0x57ijt6t5",
+                  "cn-beijing-b":"subnet-13g7p5bdujm683n6nu4nmwxlz"}
     while True:
-        for i in subnet_ids:
-            runinstacnce(i)
+        for k,v in subnet_ids.items():
+            print(k+":"+v)
+            runinstacnce(k,v)
 
 
