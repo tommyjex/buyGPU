@@ -76,9 +76,9 @@ if __name__ == '__main__':
     configuration.sk = "your sk"
     configuration.region = "cn-beijing"
     # 子网ID
-    # subnet cn-beijing-a: subnet-rs15zepqxuyov0x57ijt6t5
-    # subnet cn-beijing-b: subnet-13g7p5bdujm683n6nu4nmwxlz
-    # subnet cn-beijing-datong-b:subnet-13fbtzl3l6w3k3n6nu4014gj2
+    # subnet cn-beijing-a: 可用区A的子网
+    # subnet cn-beijing-b: 可用区B的子网
+    # subnet cn-beijing-datong-b:大同可用区B的子网
 
     # 镜像ID-cn-beijing
     # Ubuntu 20.04 with GPU Driver 64位： image-ebgz30w77ce7vtluux2d
